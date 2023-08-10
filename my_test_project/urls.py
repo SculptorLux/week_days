@@ -20,5 +20,6 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('todo_week/', include('week_days.urls'))
+    path('todo_week/', include('week_days.urls')),
+    path('calculate_geometry/', include('geometry.urls')),
 ]
