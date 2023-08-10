@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
+from django.template.loader import render_to_string
 # Create your views here.
 
 dic_week_day = {'monday': 'Понедельник!',
@@ -26,3 +27,8 @@ def get_info_by_number_of_day(request, number_of_day: int):
         redirect_url = reverse('url_name_day', args=(day_x,))
         return HttpResponseRedirect(redirect_url)
     return HttpResponse(f'Неверный номер дня - {number_of_day}')
+
+
+def main(request):
+    response = render_to_string('week_days/index.html')
+    return HttpResponse(response)
