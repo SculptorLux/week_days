@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'week_days',
+    'week_days.apps.WeekDaysConfig',
+    'geometry.apps.GeometryConfig',
 ]
 
 MIDDLEWARE = [
