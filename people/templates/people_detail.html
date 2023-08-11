@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация о людях</title>
+</head>
+<body>
+    <div>
+        {% for i in people %}
+        <h5>
+            Имя человека - {{ i.name }}
+        </h5>
+        <p>
+            Возраст - {{ i.age }}
+        </p>
+        <p>
+            Номер телефона - {{ i.phone }}
+        </p>
+        {% endfor %}
+    </div>
+</body>
+</html>

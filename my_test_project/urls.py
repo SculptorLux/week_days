@@ -18,11 +18,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from week_days import views as week_days_views
+from people import views as people_views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', week_days_views.main),
+    path('people/', include('people.urls')),
     path('todo_week/', include('week_days.urls')),
     path('calculate_geometry/', include('geometry.urls')),
 ]

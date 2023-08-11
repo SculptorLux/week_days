@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'week_days.apps.WeekDaysConfig',
     'geometry.apps.GeometryConfig',
+    'people.apps.PeopleConfig'
 ]
 
 MIDDLEWARE = [
